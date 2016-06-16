@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('public_sector_job')
+    return ["Hello!", "Squawk"]
   }
 });
