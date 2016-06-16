@@ -2,7 +2,9 @@ Public Sector Jobs
 <ul>
 
 {{#each model as |job|}}
-  <li>{{job}}</li>
+  <li>{{job.grade}}</li>
+  <li>{{job.min}}</li>
+  <li>{{job.max}}</li>
   {{/each}}
 </ul>
 {{outlet}}
