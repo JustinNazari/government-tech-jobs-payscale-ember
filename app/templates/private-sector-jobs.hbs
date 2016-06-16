@@ -1,0 +1,10 @@
+Private Sector Jobs
+
+<ul>
+{{#each model as |job|}}
+  <li>{{job.title}}</li>
+  <li>{{job.min}}</li>
+  <li>{{job.max}}</li>
+  {{/each}}
+</ul>
+{{outlet}}
