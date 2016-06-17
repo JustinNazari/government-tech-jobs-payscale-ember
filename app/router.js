@@ -9,7 +9,8 @@ Router.map(function() {
   this.route('public-sector-jobs');
   this.route('sections', function() {
     this.route('section', {path: ":section_id"}, function() {
-      this.route('private-sector-jobs');
+      this.route('private-sector-jobs'),
+      this.route('skills');
     });
   });
   this.route('locations');
