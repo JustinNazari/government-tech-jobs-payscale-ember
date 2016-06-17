@@ -2,8 +2,9 @@ Sections
 
 <ul>
 {{#each model as |section|}}
-  <li>{{section.name}}</li>
-
-  {{/each}}
+<li>{{link-to section.name 'sections.section' section}}</li>
+{{/each}}
 
 </ul>
+
+{{outlet}}
