@@ -1,10 +1,15 @@
 SECTION.HBS
 <ul>
   <li>{{model.name}}</li>
-</ul>
+
+<!-- <li>{{model.chartData}}</li> -->
+
+{{vertical-bar-chart data=model.chartData}}
 
 <ul>
-  {{#each model.chartData as |job|}}<
-    <li>{{job.title}}</li>
-    {{/each}}
+  {{#each model.chartData as |job|}}
+  <li>{{job.group}}</li>
+  {{/each}}
+</ul>
+
 </ul>
