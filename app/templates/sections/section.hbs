@@ -1,1 +1,10 @@
 SECTION.HBS
+<ul>
+  <li>{{model.name}}</li>
+</ul>
+
+<ul>
+  {{#each model.chartData as |job|}}<
+    <li>{{job.title}}</li>
+    {{/each}}
+</ul>
