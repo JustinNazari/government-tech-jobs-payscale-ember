@@ -7,9 +7,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('public-sector-jobs');
-  this.route('sections');
-  this.route('section', {path: ":/section_id"}, function(){
-    this.route('private-sector-jobs');
+  this.route('sections', function() {
+    this.route('section', {path: ":section_id"}, function() {
+      this.route('private-sector-jobs');
+    });
   });
   this.route('locations');
   this.route('public-sector-special-pay-jobs')
