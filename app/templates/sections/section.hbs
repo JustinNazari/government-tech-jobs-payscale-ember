@@ -1,6 +1,3 @@
 SECTION.HBS
-<ul>
-  {{#each model.privateSectorJobs as |job|}}
-  <li>{{job.title}}</li>
-  {{/each}}
-</ul>
+
+{{vertical-bar-chart data=model.chartData}}

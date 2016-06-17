@@ -2,9 +2,10 @@ Public Sector Jobs
 <ul>
 
 {{#each model as |job|}}
-  <li>{{job.grade}}</li>
-  <li>{{job.min}}</li>
-  <li>{{job.max}}</li>
-  {{/each}}
+  <li>{{job.gsChartData}}</li>
+{{/each}}
+
 </ul>
+{{vertical-bar-chart data=model.lastObject.allGSChartData}}
+"Hello"
 {{outlet}}
