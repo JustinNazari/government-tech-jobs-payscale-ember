@@ -8,6 +8,5 @@ export default Model.extend({
   chartData: Ember.computed(function() {
     let jobs = this.get('privateSectorJobs')
     return jobs
-    })
   })
 });
