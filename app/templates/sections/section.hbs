@@ -1,1 +1,6 @@
 SECTION.HBS
+<ul>
+  {{#each model.privateSectorJobs as |job|}}
+  <li>{{job.title}}</li>
+  {{/each}}
+</ul>
