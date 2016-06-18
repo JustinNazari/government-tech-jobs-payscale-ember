@@ -13,7 +13,9 @@ Router.map(function() {
       this.route('skills');
     });
   });
-  this.route('locations');
+  this.route('locations', function() {
+    this.route('location', {path: ":location_id"});
+  });
   this.route('public-sector-special-pay-jobs')
 });
 

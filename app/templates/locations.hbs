@@ -1,7 +1,9 @@
 Locations
 
-<ul>
-{{#each model as |location|}}
-  <li>{{location.city}}</li>
+<!-- <ul>
+  {{#each model as |location|}}
+  <li>{{link-to location.city 'locations.location' location.id}}</li>
   {{/each}}
-</ul>
+</ul> -->
+
+{{public-locality-pay-chart model=model}}
