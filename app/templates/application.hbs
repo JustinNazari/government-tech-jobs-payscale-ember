@@ -13,20 +13,21 @@
             </li>
 
             {{#bs-accordion selected=selected}}
-                {{#bs-accordion-item value="1" title="First item"}}
+                {{#bs-accordion-item value="1" title="Public Sector"}}
                   <p>{{#link-to 'public-sector-jobs'}}Public Sector Jobs{{/link-to}}</p>
+                  <p>{{#link-to 'combined-public-salaries'}}Public Sector Jobs by Location{{/link-to}}</p>
                 {{/bs-accordion-item}}
-                {{#bs-accordion-item value="2" title="Second item"}}
+                {{#bs-accordion-item value="2" title="Private Sector"}}
                   <p>{{#link-to 'sections'}}Categories{{/link-to}}</p>
                 {{/bs-accordion-item}}
-                {{#bs-accordion-item value="3" title="Third item"}}
+                {{#bs-accordion-item value="3" title="Comparison"}}
                   <p>{{#link-to 'locations'}}Locations{{/link-to}}</p>
                 {{/bs-accordion-item}}
             {{/bs-accordion}}
 
             <li><a>About</a></li>
 
-            
+
         </ul>
     </div>
     <!-- /#sidebar-wrapper -->
