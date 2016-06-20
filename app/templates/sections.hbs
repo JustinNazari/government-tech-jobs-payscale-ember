@@ -1,11 +1,10 @@
-Sections
+<div class="row">
+<div class="col-md-6">
 <ul>
 {{#each model as |section|}}
 <li>{{link-to section.name 'sections.section' section.id}}</li>
 {{/each}}
 
 </ul>
-
-
-
+</div>
 {{outlet}}

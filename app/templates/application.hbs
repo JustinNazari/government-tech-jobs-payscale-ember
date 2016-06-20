@@ -1,10 +1,47 @@
-<ul>
-<li>{{#link-to 'public-sector-jobs'}}Public Sector Jobs{{/link-to}}</li>
+<div id="wrapper">
 
-<li>{{#link-to 'sections'}}Sections{{/link-to}}</li>
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+            <img src="https://cdn2.iconfinder.com/data/icons/health-care-5/512/cyborg_brain-512.png">
+          </li>
+          <br>
+          <br>
+            <li class="sidebar-brand">
+              <a>SectorSalaries</a>
+            </li>
 
-<li>{{#link-to 'locations'}}Locations{{/link-to}}</li>
+            {{#bs-accordion selected=selected}}
+                {{#bs-accordion-item value="1" title="First item"}}
+                  <p>{{#link-to 'public-sector-jobs'}}Public Sector Jobs{{/link-to}}</p>
+                {{/bs-accordion-item}}
+                {{#bs-accordion-item value="2" title="Second item"}}
+                  <p>{{#link-to 'sections'}}Categories{{/link-to}}</p>
+                {{/bs-accordion-item}}
+                {{#bs-accordion-item value="3" title="Third item"}}
+                  <p>{{#link-to 'locations'}}Locations{{/link-to}}</p>
+                {{/bs-accordion-item}}
+            {{/bs-accordion}}
 
-</ul>
+            <li><a>About</a></li>
 
-{{outlet}}
+            
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                  {{outlet}}
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
