@@ -1,16 +1,22 @@
 <div class="col-md-6">
 SKILLS
 <ul>
-{{#if model.skills.length}}
-{{#each model.skills as |skill|}}
-<li>{{skill.name}} = {{skill.skill_coefficient}}</li>
-{{/each}}
-{{else}}
-<li>No skill modifiers for this category</li>
-{{/if}}
+  {{#if model.skills.length}}
+    {{#each model.skills as |skill|}}
+    <li>{{#link-to 'sections.section.skill' skill.id}}{{skill.name}}{{/link-to}}</li>
+    {{/each}}
+  {{else}}
+      <li>No skill modifiers for this category</li>
+  {{/if}}
 </ul>
 </div>
 <div class="row">
-{{vertical-bar-chart data=model.privateSectorJobsChartData}}
-{{vertical-bar-chart data=model.skillsChartData}}
+
+
+  <br>
+
+  <br>
+  {{outlet}}
+{{section-chart model=model}}
+
 </div>

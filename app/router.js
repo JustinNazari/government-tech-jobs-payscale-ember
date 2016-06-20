@@ -8,9 +8,10 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('public-sector-jobs');
   this.route('sections', function() {
-    this.route('section', {path: ":section_id"}, function() {
-      this.route('private-sector-jobs'),
+    this.route('section', {path: "/:section_id"}, function() {
       this.route('skills');
+      this.route('skill', {path: "/skills/:skill_id"});
+      this.route('private-sector-jobs');
     });
   });
   this.route('locations', function() {
@@ -20,8 +21,3 @@ Router.map(function() {
 });
 
 export default Router;
-
-
-// , function(){
-//   this.route('private-sector-jobs');
-// });
