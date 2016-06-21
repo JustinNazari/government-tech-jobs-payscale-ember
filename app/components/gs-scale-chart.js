@@ -7,8 +7,8 @@ export default Ember.Component.extend({
     model.content.map(function(job) {
       let data = job._data;
       chart_data.pushObjects([
-        { "label": 'Dark - Mininum', "group": data.grade, "value": data.min },
-        { "label": 'Light - Maximum', "group": data.grade, "value": data.max }
+        { "label": 'Dark - Mininum', "group": "GS " + data.grade, "value": data.min },
+        { "label": 'Light - Maximum', "group": "GS " + data.grade, "value": data.max }
       ]);
     });
     return chart_data;
