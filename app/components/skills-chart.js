@@ -8,9 +8,9 @@ JobSkillsChartData: Ember.computed("model", function() {
   let chart_data = []
   section.get('privateSectorJobs').forEach(function(item){
     let min_hash = {"group": (item.get('title') + " minimum"), "value": item.get('min'), "label": "Minimum Salary"}
-    let min_sup = {"group": (item.get('title') + " minimum"), "value": (item.get('min') * skill_coefficient), "label": "Min plus supp"}
+    let min_sup = {"group": (item.get('title') + " minimum"), "value": (item.get('min') * skill_coefficient), "label": "Mininum with Skill Supplement"}
     let max_hash = {"group": (item.get('title') + " maximum"), "value": item.get('max'), "label": "Maximum Salary"}
-    let max_sup = {"group": (item.get('title') + " maximum"), "value": (item.get('max') * skill_coefficient), "label": "Max plus supp"}
+    let max_sup = {"group": (item.get('title') + " maximum"), "value": (item.get('max') * skill_coefficient), "label": "Maximum with Skill Supplement"}
     chart_data.push(min_hash)
     chart_data.push(min_sup)
     chart_data.push(max_hash)

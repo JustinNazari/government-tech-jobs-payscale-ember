@@ -1,14 +1,13 @@
 <div class="col-md-6">
-SKILLS
-<ul>
+  <ul class="list-inline">
   {{#if model.skills.length}}
     {{#each model.skills as |skill|}}
-    <li>{{#link-to 'sections.section.skill' skill.id}}{{skill.name}}{{/link-to}}</li>
+    <li>{{#link-to 'sections.section.skill' skill.id}}{{skill.name}}{{/link-to}}</li><br>
     {{/each}}
   {{else}}
-      <li>No skill modifiers for this category</li>
+      <i>No skill modifiers for this category</i>
   {{/if}}
-</ul>
+  </ul>
 </div>
 <div class="row">
 
@@ -17,6 +16,9 @@ SKILLS
 
   <br>
   {{outlet}}
-{{section-chart model=model}}
+  <div class="col-md-12">
+    <br>
+    {{section-chart model=model}}
+  </div>
 
 </div>
