@@ -1,0 +1,11 @@
+<ul>
+
+{{#each model as |location|}}
+    <li>{{link-to location.city 'locations.location' location}}</li>
+    {{/each}}
+{{#each states as |state|}}
+<li>{{state}}</li>
+{{/each}}
+</ul>
+
+{{yield}}
