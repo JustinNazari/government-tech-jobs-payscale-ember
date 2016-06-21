@@ -1,11 +1,11 @@
 <h1>Private Sector Jobs in Technology</h1>
 
 <h3>Methodology</h3>
-Information about private sector salaries comes from Robert Half International's 2016 Salary Guide, which forecasts
+Information about private sector salaries comes from <b>Robert Half International's 2016 Salary Guide</b>, which forecasts
 compensation trends across a wide array of technology positions. Salaries
 reflect starting pay only and do not include bonuses and other forms of
-compensation. The salary information in the guide is based on the real life
-observations of our Robert Half Technology staffing and recruiting
+compensation. The salary information in the guide is <i>based on the real life
+observations</i> of our Robert Half Technology staffing and recruiting
 professionals who make thousands of interim and full-time placements each
 year, as well as frequent surveys of chief information officers (CIOs) and
 other IT professionals.
@@ -13,14 +13,18 @@ other IT professionals.
 <h4>Skill coefficients</h4>
 Certain technology fields have skills that provide an additional boost to one's salary.
 The coefficients are <b>based on national averages</b>.
-<br><br>
+<br><br><br>
 
 <div class="col-md-6">
-  <ul>
+  <center><h4>Categories</h4></center>
+  <ul class="list-inline">
   {{#each model as |section|}}
-    <li>{{link-to section.name 'sections.section' section}}</li>
+    <li><button type="button" id="cat-link" class="btn btn-default">{{link-to section.name 'sections.section' section}}</button></li>
   {{/each}}
   </ul>
 </div>
 
+<div class="col-md-6">
+  <center><h4>Skills</h4></center>
+</div>
 {{outlet}}

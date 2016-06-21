@@ -134,3 +134,15 @@
   color: light gray;
   font-family: 'Coda Caption', sans-serif;
 }
+
+#cat-link {
+  font-size: 12px;
+  color: dark gray;
+  text-transform: uppercase;
+}
+
+#cat-link a:hover {
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
