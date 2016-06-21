@@ -1,10 +1,7 @@
 <ul>
 
-{{#each model as |location|}}
-    <li>{{link-to location.city 'locations.location' location}}</li>
-    {{/each}}
 {{#each states as |state|}}
-<li>{{state}}</li>
+<li>{{link-to state.state 'locations.location' state.id}}</li>
 {{/each}}
 </ul>
 
