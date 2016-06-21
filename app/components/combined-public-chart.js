@@ -7,11 +7,9 @@ export default Ember.Component.extend({
     model.content.map(function(job) {
       let data = job._data;
       if (data.grade < 9) {
-        chart_data.pushObjects([
-          { "group": data.city + ", " + data.state, "xValue": Math.round(data.min), "yValue": data.grade},
-          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max), "yValue": data.grade}
-        ]);
-      }
+        chart_data.pushObject(
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max + data.min)/2, "yValue": data.grade}
+        )}
     });
     return chart_data;
   }),
@@ -22,11 +20,9 @@ export default Ember.Component.extend({
     model.content.map(function(job) {
       let data = job._data;
       if (data.grade < 13 && data.grade > 8) {
-        chart_data.pushObjects([
-          { "group": data.city + ", " + data.state, "xValue": Math.round(data.min), "yValue": data.grade},
-          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max) , "yValue": data.grade}
-        ]);
-      }
+        chart_data.pushObject(
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max + data.min)/2, "yValue": data.grade}
+        )}
     });
     return chart_data;
   }),
@@ -37,10 +33,9 @@ export default Ember.Component.extend({
     model.content.map(function(job) {
       let data = job._data;
       if (data.grade > 12) {
-        chart_data.pushObjects([
-          { "group": data.city + ", " + data.state, "xValue": Math.round(data.min), "yValue": data.grade},
-          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max) , "yValue": data.grade}        ]);
-      }
+        chart_data.pushObject(
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max + data.min)/2, "yValue": data.grade}
+      )}
     });
     return chart_data;
   }),
