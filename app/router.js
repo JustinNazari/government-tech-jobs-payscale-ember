@@ -19,6 +19,7 @@ Router.map(function() {
   });
   this.route('public-sector-special-pay-jobs')
   this.route('combined-public-salaries');
+  this.route('combined-public-salaries-details');
 });
 
 export default Router;

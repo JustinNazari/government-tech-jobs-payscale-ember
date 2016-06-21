@@ -128,3 +128,9 @@
         margin-right: 0;
     }
 }
+
+#logo-header {
+  font-size: 25px;
+  color: light gray;
+  font-family: 'Coda Caption', sans-serif;
+}
