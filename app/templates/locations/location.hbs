@@ -1,1 +1,6 @@
-{{vertical-bar-chart data=model.privateSectorJobsChartData}}
+<!-- {{vertical-bar-chart data=model.privateSectorJobsChartData}} -->
+Hello!
+
+{{#each model as |job|}}
+  {{job.grade}}
+{{/each}}

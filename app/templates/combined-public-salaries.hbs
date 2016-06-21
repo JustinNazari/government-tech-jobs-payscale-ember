@@ -1,6 +1,34 @@
 I'm here!
-
-{{#each model as |salary|}}
-  {{salary.location.city}}
+{{#each model as |location|}}
+  {{#if location.publicSectorCoefficient}}
+    <li>{{link-to location.city 'locations.location' location.id}}</li>
+  {{/if}}
 {{/each}}
+<table class="table table-striped">
+  <thead class="thead-inverse">
+    <tr>
+      <th>City</th>
+      <th>State</th>
+      <th>Grade</th>
+      <th>Minimum Salary</th>
+      <th>Maximum Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |salary|}}
+    <tr>
+      <td>{{salary.location.city}}</td>
+      <td>{{salary.location.state}}</td>
+      <td>{{salary.grade}}</td>
+      <td>${{salary.min_base_pay}}</td>
+      <td>${{salary.max_base_pay}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+  <!-- {{combined-public-pay-chart model=salary}} -->
+  <!-- {{combined-public-pay-chart model=salary location=salary.location.city}} -->
+
+<!-- {{combined-public-pay-chart model=model}} -->
+
 {{outlet}}

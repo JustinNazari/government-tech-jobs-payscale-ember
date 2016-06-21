@@ -7,5 +7,6 @@ export default Model.extend({
   publicSectorCoefficient: attr('number'),
   city: attr(),
   state: attr(),
-  publicSectorSpecialPayJobs: hasMany('public-sector-special-pay-job')
+  publicSectorSpecialPayJobs: hasMany('public-sector-special-pay-job'),
+  combinedPublicSalaries: hasMany('combined-public-salary')
 });
