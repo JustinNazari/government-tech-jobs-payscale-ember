@@ -13,11 +13,6 @@ An employee's salary amounts to <b>base pay multiplied by either the locality or
       It serves as the foundation for calculating variances based on type of role (e.g. STEM) and location.
     </div>
     <div class="col-sm-4">
-      <center><h5>Locality pay</h5></center>
-      Locality pay is an addition to one's base salary depending on location.
-      It is meant to reflect cost of living and market rates for a particular place.
-    </div>
-    <div class="col-sm-4">
       <center><h5>Special pay</h5></center>
       Special pay is a supplement awarded for roles that are more lucrative in the private sector.
       In our calculations, selected special rates apply to the following positions:
@@ -26,6 +21,12 @@ An employee's salary amounts to <b>base pay multiplied by either the locality or
         <li>COMPUTER SCIENCE SPECIALIST</li>
         <li>INFORMATION TECHNOLOGY MANAGEMENT</li>
       </ul>
+      Special salaries are typically <b>applied for junior- and mid-level grades</b> (between 5 and 12).
+    </div>
+    <div class="col-sm-4">
+      <center><h5>Locality pay</h5></center>
+      Locality pay is an addition to one's base salary depending on location.
+      It is meant to reflect cost of living and market rates for a particular place.
     </div>
   </div>
 </div>
@@ -39,12 +40,12 @@ Employees typically start at step 1 of whatever GS grade they are assigned.
 We calculated the minimum and maximum salaries of each grade based on the lowest and highest steps available (steps 1 and 10, respectively).
 
 <br><br>
-<center><h3>Base Pay</h3></center>
+<center><h3>Special & Locality Pay</h3></center>
+{{combined-public-chart model=model}}
 
-{{gs-scale-chart model=model}}
 {{outlet}}
 
-
+<br><br>
 <h4>Sources:</h4>
 <h5>Office of Personnel Management (OPM)</h5>
 <li><a href="https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/2016/general-schedule/">Base pay</a></li>

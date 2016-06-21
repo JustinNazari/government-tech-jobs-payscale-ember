@@ -3,18 +3,21 @@
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
+          <br>
           <li class="sidebar-brand">
             <center><img src="https://cdn2.iconfinder.com/data/icons/health-care-5/512/cyborg_brain-512.png"></center>
           </li>
           <br>
           <br>
             <li class="sidebar-brand">
-              <center><h3>SectorSalaries</h3></center>
+              <h3 id="logo-header">SectorSalaries</h3>
             </li>
 
             {{#bs-accordion selected=selected}}
                 {{#bs-accordion-item value="1" title="Public Sector"}}
-                  <p>{{#link-to 'public-sector-jobs'}}Public Sector Jobs{{/link-to}}</p>
+                  <p>{{#link-to 'public-sector-jobs'}}Base Pay{{/link-to}}</p>
+                  <p>{{#link-to 'combined-public-salaries'}}Combined Pay{{/link-to}}</p>
+                  <p>{{#link-to 'combined-public-salaries-details'}}Combined Pay by Location{{/link-to}}</p>
                 {{/bs-accordion-item}}
                 {{#bs-accordion-item value="2" title="Private Sector"}}
                   <p>{{#link-to 'sections'}}Categories{{/link-to}}</p>
