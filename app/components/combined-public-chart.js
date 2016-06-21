@@ -1,16 +1,48 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  combinedPayChartData: Ember.computed("model", function() {
+  juniorPayChartData: Ember.computed("model", function() {
     let model = this.get('model');
     var chart_data = [];
     model.content.map(function(job) {
       let data = job._data;
-      chart_data.pushObjects([
-        { "label": data.grade, "group": "Grade " + data.grade + ' mininum salary', "value": data.min_base_pay },
-        { "label": data.grade, "group": "Grade " + data.grade + ' maximum salary', "value": data.max_base_pay }
-      ]);
+      if (data.grade < 9) {
+        chart_data.pushObjects([
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.min), "yValue": data.grade},
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max), "yValue": data.grade}
+        ]);
+      }
     });
     return chart_data;
-  })
+  }),
+
+  midPayChartData: Ember.computed("model", function() {
+    let model = this.get('model');
+    var chart_data = [];
+    model.content.map(function(job) {
+      let data = job._data;
+      if (data.grade < 13 && data.grade > 8) {
+        chart_data.pushObjects([
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.min), "yValue": data.grade},
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max) , "yValue": data.grade}
+        ]);
+      }
+    });
+    return chart_data;
+  }),
+
+  seniorPayChartData: Ember.computed("model", function() {
+    let model = this.get('model');
+    var chart_data = [];
+    model.content.map(function(job) {
+      let data = job._data;
+      if (data.grade > 12) {
+        chart_data.pushObjects([
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.min), "yValue": data.grade},
+          { "group": data.city + ", " + data.state, "xValue": Math.round(data.max) , "yValue": data.grade}        ]);
+      }
+    });
+    return chart_data;
+  }),
+
 });
