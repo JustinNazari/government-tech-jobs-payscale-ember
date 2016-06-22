@@ -1,0 +1,20 @@
+<h1>Comparison between Public and Private Sector Jobs</h1>
+
+<h3>Averages</h3>
+Both public and private sector datasets have robust data on salaries offered for technical positions.
+The private sector salary information is represented in national averages, which take into account
+locality supplements based on location. Public sector information is more complex: there are factors of base pay,
+special pay, and locality to take into account.
+We calculated the average public pay through the following process:
+<ul>
+  <li>Retrieve the average locality pay coefficient, divide by 100 for percentage value.</li>
+  <li>Calculate minimum average public salary by grade 8 mininum.</li>
+  <li>Calculate maximum average public salary by grade 12 maximum.</li>
+  <li>Calculate final result by averaging the mininum and maximum averages, and multiplying by the average locality coefficient.</li>
+
+</ul>
+Overall, you can see that <b>public sector pay is about 16% less than private sector pay</b>, on average.
+<br><br>
+
+{{average-chart model=model}}
+{{outlet}}
