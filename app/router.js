@@ -6,6 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', { path: '/' });
   this.route('public-sector-jobs');
   this.route('sections', function() {
     this.route('section', {path: "/:section_id"}, function() {
