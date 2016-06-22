@@ -18,14 +18,15 @@ The coefficients are <b>based on national averages</b>.
 
 <div class="col-md-6">
   <center><h4>Categories</h4></center>
-  <ul class="list-inline">
+  <ul><hr>
   {{#each model as |section|}}
-    <li><button type="button" id="cat-link" class="btn btn-default">{{link-to section.name 'sections.section' section}}</button></li>
+    <p id="cat-link">{{link-to section.name 'sections.section' section}}</p>
   {{/each}}
   </ul>
 </div>
 
 <div class="col-md-6">
   <center><h4>Skills</h4></center>
+  <hr>
 </div>
 {{outlet}}

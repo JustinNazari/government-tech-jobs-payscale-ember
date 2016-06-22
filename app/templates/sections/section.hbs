@@ -1,8 +1,8 @@
 <div class="col-md-6">
-  <ul class="list-inline">
+  <ul>
   {{#if model.skills.length}}
     {{#each model.skills as |skill|}}
-    <li>{{#link-to 'sections.section.skill' skill.id}}{{skill.name}}{{/link-to}}</li><br>
+    <p id="cat-link">{{#link-to 'sections.section.skill' skill.id}}{{skill.name}}{{/link-to}}</p>
     {{/each}}
   {{else}}
       <i>No skill modifiers for this category</i>
