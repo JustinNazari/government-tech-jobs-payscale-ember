@@ -101,7 +101,7 @@
     background: none;
 }
 
-@media(min-width:768px) {
+@media(min-width:800px) {
     #wrapper {
         padding-left: 250px;
     }
@@ -142,8 +142,37 @@
   text-transform: uppercase;
 }
 
+#nav-link a {
+  font-size: 20px;
+  color: gray;
+  margin-top: 10px;
+  padding: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#nav-link a:hover {
+  text-decoration: none;
+  color:black;
+  text-transform: uppercase;
+}
+
 #cat-link a:hover {
   font-size: 12px;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+#topnav {
+  background-color: black;
+  padding: 10px;
+}
+
+.btn {
+  margin-right:10px;
+  margin-bottom:10px;
+  color: gray;
+  font-weight: bold;
   text-transform: uppercase;
 }

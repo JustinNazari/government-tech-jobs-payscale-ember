@@ -1,5 +1,33 @@
 <div id="wrapper">
 
+    <!-- Navbar -->
+    <ul class="nav nav-pills visible-xs" id="topnav">
+      <center>
+      {{#link-to 'index'}}<img src="https://cdn2.iconfinder.com/data/icons/health-care-5/512/cyborg_brain-512.png" height=100px>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{/link-to}}
+      <br><br>
+      <li>{{#bs-dropdown}}
+        {{#bs-dropdown-button}}Public Sector{{/bs-dropdown-button}}
+        {{#bs-dropdown-menu}}
+          <li>{{#link-to 'combined-public-salaries'}}Combined Pay{{/link-to}}</li>
+          <li>{{#link-to "index"}}Something different{{/link-to}}</li>
+        {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}
+      {{#bs-dropdown}}
+        {{#bs-dropdown-button}}Private Sector{{/bs-dropdown-button}}
+        {{#bs-dropdown-menu}}
+          <li>{{#link-to 'sections'}}Average Pay by Category{{/link-to}}</li>
+        {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}
+      {{#bs-dropdown}}
+        {{#bs-dropdown-button}}Comparison{{/bs-dropdown-button}}
+        {{#bs-dropdown-menu}}
+          <li>{{#link-to 'locations'}}By Location{{/link-to}}</li>
+          <li>{{#link-to 'averages'}}By Average Salary{{/link-to}}</li>
+        {{/bs-dropdown-menu}}
+      {{/bs-dropdown}}</li>
+    </center>
+    </ul>
+
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
